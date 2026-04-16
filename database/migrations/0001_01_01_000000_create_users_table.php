@@ -19,8 +19,8 @@ return new class extends Migration
                 password VARCHAR(255) NOT NULL,
                 status VARCHAR(255) DEFAULT \'active\',
                 preferred_language VARCHAR(10) DEFAULT \'fr\',
-                last_country_id BIGINT UNSIGNED NULL,
-                last_city_id BIGINT UNSIGNED NULL,
+last_country_id BIGINT NULL,                
+                last_city_id BIGINT NULL,
                 remember_token VARCHAR(100) NULL,
                 created_at TIMESTAMP NULL,
                 updated_at TIMESTAMP NULL
@@ -39,7 +39,7 @@ return new class extends Migration
                 user_id BIGINT UNSIGNED NULL,
                 ip_address VARCHAR(45) NULL,
                 user_agent TEXT NULL,
-                payload LONGTEXT NOT NULL,
+                payload TEXT NOT NULL,
                 last_activity INT NOT NULL
             )');
 
